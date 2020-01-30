@@ -55,7 +55,7 @@ const searchStatusBased = async (status) => {
 const deleteAnnouncement = async (id) => {
   const queryText = 'DELETE FROM Announcements WHERE id=$1';
   const value = [id];
-  const result = await query(queryText, value);
+  const result = await query.query1(queryText, value);
   return result;
 };
 

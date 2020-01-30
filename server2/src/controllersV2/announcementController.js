@@ -132,7 +132,7 @@ const viewAnnouncements = async (req, res) => {
   }
   return res.status(200).json({
     status: 'success',
-    data: announcements.rows[0],
+    data: announcements.rows,
   });
 };
 const viewMyAnnouncements = async (req, res) => {
@@ -159,7 +159,7 @@ const viewMyAnnouncements = async (req, res) => {
   }
   return res.status(200).json({
     status: 'success',
-    data: announcements.rows[0],
+    data: announcements.rows,
   });
 };
 const announcementSearchStatus = async (req, res) => {
@@ -180,7 +180,7 @@ const announcementSearchStatus = async (req, res) => {
   }
   return res.status(200).json({
     status: 'success',
-    data: exist.rows[0],
+    data: exist.rows,
   });
 };
 const announcementDelete = async (req, res) => {
